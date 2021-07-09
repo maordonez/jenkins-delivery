@@ -1,14 +1,22 @@
 pipeline {
-    agent any 1
     stages { 
         stage('Build') { 
-             sleep(5)
+             steps {
+               echo 'build app'
+               sleep 60
+          }
         }
         stage('Test') { 
-            sleep(7)
+            steps {
+               echo 'test app'
+               sleep 60
+          }
         }
         stage('Deploy') { 
-            sleep(8)
+            steps {
+               echo 'deploy app'
+               sleep 60
+          }
         }
     }
 }
